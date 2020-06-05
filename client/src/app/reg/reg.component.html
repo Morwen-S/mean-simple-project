@@ -1,0 +1,32 @@
+<div class="col-md-8 mt-5 pt-3 px-5 container">
+  <h4 class="mb-3 pt-6">Registration form</h4>
+  <form (submit)="userRegister()" class="needs-validation" novalidate="">
+    <div class="mb-3">
+      <label for="name">Name</label>
+      <input [(ngModel)]="name" name="nameForm" type="text" class="form-control" id="name" placeholder="Name">
+    </div>
+
+    <div class="mb-3">
+      <label for="login">Login</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">@</span>
+        </div>
+        <input [(ngModel)]="login" name="loginForm" type="text" class="form-control" id="login" placeholder="Login">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email">Email</label>
+      <input [(ngModel)]="email" name="emailForm" type="email" class="form-control" id="email" placeholder="you@example.com">
+    </div>
+
+    <div class="mb-3">
+      <label for="password">Password</label>
+      <input [(ngModel)]="password" name="passwordForm" type="password" id="password" class="form-control" placeholder="Password">
+    </div>
+
+    <hr class="mb-4">
+    <button class="btn btn-success btn-lg btn-block" type="submit">Sign up</button>
+  </form>
+</div>
