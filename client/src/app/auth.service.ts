@@ -15,8 +15,8 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   registerUser(user) {
-    // const urlApi = 'http://localhost:3000/profile/reg'
-    const urlApi = 'profile/reg'
+    const urlApi = 'http://localhost:3000/profile/reg'
+    // const urlApi = 'profile/reg'
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     return this.http.post(
@@ -26,8 +26,8 @@ export class AuthService {
   }
 
   authorizationUser(user) {
-    // const urlApi = 'http://localhost:3000/profile/auth'
-    const urlApi = 'profile/auth'
+    const urlApi = 'http://localhost:3000/profile/auth'
+    // const urlApi = 'profile/auth'
     let headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     return this.http.post(
