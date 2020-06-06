@@ -9,7 +9,11 @@ const profile = require('./routes/profile');
 
 const app = express();
 
-const port = process.env.PORT || 8080;
+// port for deploy
+// const port = process.env.PORT || 8080;
+
+// port for dev
+const port = 3000;
 
 //Authorization
 app.use(passport.initialize());
@@ -45,9 +49,10 @@ app.get('/', (req, res) => {
   res.send('Main page');
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public/index.html'));
-})
+// route for deploy
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public/index.html'));
+// })
 
 app.use('/profile', profile);
 

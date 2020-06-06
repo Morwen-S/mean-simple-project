@@ -1,32 +1,31 @@
 # MEAN test project
 
+[LiveDemo](https://mean-stack-exp.herokuapp.com/)
+
 ## Project setup
+Server side:
 ```
 npm install
 ```
-###Start MongoDB on Ubuntu
+Front side:
+```
+cd ./client && npm install
+```
+###MongoDB on Ubuntu
+Start:
 ```
 sudo systemctl start mongod
 ```
-###Verify that MongoDB has started successfully
+Stop: 
 ```
-sudo systemctl status mongod
+sudo service mongod stop
 ```
-###Stop MongoDB
-```
-sudo systemctl stop mongod
-```
-### Compiles and hot-reloads for development
+### Compiles for development
+Start server: 
 ```
 npm start
 ```
-
-### Compiles and minifies for production
+Start front:
 ```
-
-```
-
-### Run your tests
-```
-yarn run test
+cd ./client && ng serve
 ```
